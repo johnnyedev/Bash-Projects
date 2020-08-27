@@ -23,3 +23,7 @@
 
 ### Below is a one liner version of the script ###
 echo -n "What do you want to name the bash script?" && read answer && touch $answer.sh && chmod 644 $answer.sh && echo "#!/bin/bash" >> $answer.sh && echo "Created $answer bash script!"
+
+
+## To Do ##
+#	~ Make script ask and make python or bash template files
