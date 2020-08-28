@@ -1,26 +1,25 @@
 # Script Status: WORKING #
 
+# User Backup Script Information #
+### This script will ask the user which $user they want to create a backup for. Then using tar with gzip compression
+### it will back up the home directory.
+
 # How it Works #
-###       Step 1:) Ask the user for the $name of the account they want to back up
-###       Step 2:) The script then verifies that the $name exists on the system
-###       Step 3:) If the user does exist the script then verifies with the user that they want to move forward
-###       Step 4:) Then a tar script with gzip compress runs
-###       Step 5:) The backup_$name.tar.gz is then placed in /home/backup/$name, this directory needs 777 permissions
-###       Step 6:) The script then makes a copy of /home/backup/back_$name.tar.gz and places it in the users home directory
+###     Step 1:) Runs function Get_Name. This function asks the user for the $name (username) to create a backup for.
+###              It then has a if statement to ensure that the user exists on the machine.
+###     Step 2:) Runs the funcation Get_Compression_Tpe. Which allows the user to select between gzi (gz),
+###              bzip2 (bz2) or none (none)
+###     Step 3:) Runs the funcation Create_Tar_compression. Which uses the tar command with the compression type
+###             choosen in previous step to create the backup
+###     Step 4:) Run the funcation Move_Backup. Which creates a copy of the back up in the usrs home directory.
+
+
+# To Do #
+###     ~ Turn into a one liner
+
+# Advance To Do #
+###     ~ Push the tar.gz file newly created to a AWS ECS instance for off premise storage
 
 # What does this script do? #
 ### This script automates the task of created user account backups. This basically creates a TAR archive that is compressed by gzip of the /home/$name/ directory. 
-
-
-# The future of this script #
-### In future releases I would like to add the below features:
-###  ~ Option to choose between gzip, b2zip and xz compress types
-###  ~ Option to back up user Databases
-###  ~ Option to push the backup to an AWS EC2 instance.
-###  ~ Move script to a one liner to be quickly ran on other machines
-
-
-
-
-
 

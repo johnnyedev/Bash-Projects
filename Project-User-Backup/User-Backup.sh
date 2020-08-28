@@ -1,25 +1,5 @@
 #!/bin/bash
 
-# Backup Script Information #
-### This script will ask the user which $user they want to create a backup for. Then using tar with gzip compression
-### it will back up the home directory.
-
-# How it Works #
-###	Step 1:) Runs function Get_Name. This function asks the user for the $name (username) to create a backup for.
-###		 It then has a if statement to ensure that the user exists on the machine.
-###	Step 2:) Runs the funcation Get_Compression_Tpe. Which allows the user to select between gzi (gz), 
-###		 bzip2 (bz2) or none (none)
-###	Step 3:) Runs the funcation Create_Tar_compression. Which uses the tar command with the compression type
-###		choosen in previous step to create the backup
-###	Step 4:) Run the funcation Move_Backup. Which creates a copy of teh back up in the usrs home directory.
-
-
-# To Do #
-###	~ Turn into a one liner
-
-# Advance To Do #
-###	~ Push the tar.gz file newly created to a AWS ECS instance for off premise storage
-
 # Start of Script #
 
 ### Ask the user for the $name to backup
@@ -68,7 +48,7 @@ Get_Compression_Type
 Create_Tar_Compressed
 Move_Backup
 
-
+# End of script #
 
 
 
