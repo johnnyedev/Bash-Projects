@@ -16,22 +16,25 @@ function Get_A_Record {
 	dig $domain +short
 }
 
+function Add_Lines {
+	printf "~~~~~~~~~~~~"
+}
 
 # Calling functions #
-printf "~~~~~~~~~~~~"
+Add_Lines
 printf "DNS records for $domain"
-printf "~~~~~~~~~~~~"
+Add_Lines
 printf "\n"
 Get_Domain
 printf "\n"
-printf "~~~~~~~~~~~~"
+Add_Lines
 printf "MX records"
-printf "~~~~~~~~~~~~"
+Add_Lines
 printf "\n"
 Get_MX_Record
 printf "\n"
-printf "~~~~~~~~~~~~"
+Add_Lines
 printf "Public IP of $domain"
-printf "~~~~~~~~~~~~"
+Add_Lines
 printf "\n"
 Get_A_Record
