@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Variables
-HOST="3.19.32.45" # Remote Host
-USER="ec2-user" # Remote Machine User
-LOCAL_KEY_PATH="/home/da-basset/Keys/Playground_Centos.pem" # Path to SSH key on local machine
+HOST="<HOSTNAME HERE>" # Remote Host
+USER="<USERNAME HERE>" # Remote Machine User
+LOCAL_KEY_PATH="<LOCAL KEY PATH HERE>" # Path to SSH key on local machine
 SSH="ssh -i $LOCAL_KEY_PATH $USER@$HOST" # Variable for easy SSH access
 DATE=$(date '+%Y-%m-%d') # Date variable for the backup name format
 FILE="backup.$DATE.tar.gz" # Calling the backup file through this variable
