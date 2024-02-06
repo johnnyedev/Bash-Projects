@@ -2,11 +2,13 @@
 
 An overview of the scripts, what they do, completion status, and future plans
 
-----
+## Ideas
+1. Add MOTD Splash 
+2. MOTD Changer/rotator
 
-## Status: Completed
+
 ----
-## Status: WIP
+## Work-In-Progress:
 
 ### Auto-Bash.sh
 **Description:** 
@@ -60,7 +62,8 @@ This project is interactive, it asks the user for the permissions they want to s
 
 **Need To Do:**
 1. Combine Readme.md into .sh file
-
+----
+## Completed:
 
 
 
